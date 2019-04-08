@@ -1,0 +1,6 @@
+tox
+coverage
+flake8
+flake8-docstrings
+django
+radon
