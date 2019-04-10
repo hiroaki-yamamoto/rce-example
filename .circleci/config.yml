@@ -38,7 +38,3 @@ jobs:
             coverage combine &&
             coverage xml &&
             ../cc-test-reporter after-build --exit-code $EXIT_CODE -t coverage.py
-      - persist_to_workspace:
-          root: ../
-          paths:
-            - ci
