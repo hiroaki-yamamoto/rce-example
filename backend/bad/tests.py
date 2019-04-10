@@ -96,3 +96,5 @@ class BadReqRCETest(BadResRequestCheck):
         resp = super(BadResRequestCheck, self).test_method()
         p = json.loads(resp.content.decode('utf-8'))
         self.assertEqual(p, {"result": [1, 2, 3] * 5})
+
+# Missing Zero-Division Error check is intentional. Be critic :P

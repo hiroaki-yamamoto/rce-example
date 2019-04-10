@@ -21,10 +21,12 @@ Including another URLconf
 from django.urls import path
 
 from .bad.views import BadView
+from .good.views import GoodView
 from .insufficient.views import InsufView
 from .utils import require_query_uniqueness
 
 urlpatterns = [
     path('bad', require_query_uniqueness(BadView.as_view()), name="bad"),
+    path('good', require_query_uniqueness(GoodView.as_view()), name="good"),
     path('insuf', require_query_uniqueness(InsufView.as_view()), name="insuf"),
 ]

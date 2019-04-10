@@ -1,18 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
-"""Insufficient Resource."""
-
-# Create your views here.
+"""Good views."""
 
 from django.http import JsonResponse
 from django.views.generic import View
+
 from .forms import CalcForm
 
+# Create your views here.
 
-class InsufView(View):
-    """Insufficient view."""
+
+class GoodView(View):
+    """Good view."""
 
     def get(self, req):
         """Get handler."""

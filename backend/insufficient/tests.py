@@ -8,6 +8,8 @@ import json
 from urllib.parse import urlencode
 from unittest import TestCase
 
+import django.forms as forms
+
 from .views import InsufView
 from ..utils import UNIQUE_MESSAGE
 
@@ -77,6 +79,33 @@ class InsufReqMoreThan2ValuesTest(InsufResRequestCheck):
             name: [UNIQUE_MESSAGE.format(name=name, size=len(values))]
             for (name, values) in self.page_kwargs.items()
         })
+
+
+class InsufReqInvalidPayloadTest(InsufResRequestCheck):
+    """Insuf request that has more than 2 values test."""
+
+    status_code = 417
+
+    def setUp(self):
+        """Setup."""
+        self.page_kwargs = {
+            'a': "'test+'",
+            'b': "'test2'",
+            'op': '+',
+        }
+        super().setUp()
+
+    def test_method(self):
+        """Test method."""
+        resp = super(InsufResRequestCheck, self).test_method()
+        p = json.loads(resp.content.decode('utf-8'))
+        self.assertEqual(p, {
+            "a": [forms.IntegerField.default_error_messages['invalid']],
+            "b": [forms.IntegerField.default_error_messages['invalid']],
+        })
+
+
+# Missing Zero-Division Error check is intentional. Be critic :P
 
 
 class InsufReqRCETest(InsufResRequestCheck):
