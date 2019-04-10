@@ -1,9 +1,12 @@
 # Example code that have RCE Vulnerability
 
 [![Maintainability]][Maintainability Link]
+[![Test Coverage]][Test Coverage Link]
 
 [Maintainability]: https://api.codeclimate.com/v1/badges/9d96660e40c849cd9a66/maintainability
 [Maintainability Link]: https://codeclimate.com/github/hiroaki-yamamoto/rce-example/maintainability
+[Test Coverage]: https://api.codeclimate.com/v1/badges/9d96660e40c849cd9a66/test_coverage
+[Test Coverage Link]: https://codeclimate.com/github/hiroaki-yamamoto/rce-example/test_coverage
 
 ## Important Note
 **Don't use this code for production. This code contains Remote Code Execution
