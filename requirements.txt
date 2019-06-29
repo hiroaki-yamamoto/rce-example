@@ -24,9 +24,9 @@ pyflakes==2.1.1           # via flake8
 pytz==2019.1              # via django
 radon==3.0.3
 six==1.12.0               # via mando, pydocstyle, tox
-snowballstemmer==1.2.1    # via pydocstyle
+snowballstemmer==1.9.0    # via pydocstyle
 sqlparse==0.3.0           # via django
 toml==0.10.0              # via tox
-tox==3.12.1
+tox==3.13.1
 virtualenv==16.6.1        # via tox
 zipp==0.5.1               # via importlib-metadata
