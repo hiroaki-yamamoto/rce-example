@@ -2,5 +2,6 @@ tox
 coverage
 flake8
 flake8-docstrings
+pydocstyle<4.0.0
 django
 radon
