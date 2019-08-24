@@ -31,4 +31,4 @@ sqlparse==0.3.0           # via django
 toml==0.10.0              # via tox
 tox==3.13.2
 virtualenv==16.7.4        # via tox
-zipp==0.5.2               # via importlib-metadata
+zipp==0.6.0               # via importlib-metadata
